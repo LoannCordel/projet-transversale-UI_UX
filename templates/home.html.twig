@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} – RAIL</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f1117;
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #1a1d27;
+            border-bottom: 1px solid #2d3748;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #63b3ed;
+            letter-spacing: 0.05em;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #63b3ed; }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #2d3748;
+            color: #63b3ed;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title span { color: #63b3ed; }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: #a0aec0;
+            max-width: 540px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #63b3ed;
+            color: #0f1117;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn:hover { background: #90cdf4; transform: translateY(-1px); }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: #4a5568;
+            border-top: 1px solid #2d3748;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚙ RAIL</h1>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/about">À propos</a>
+    </nav>
+</header>
+
+<main>
+    <span class="hero-badge">Projet Transversal</span>
+
+    <h2 class="hero-title">
+        Bienvenue sur <span>{{ title }}</span>
+    </h2>
+
+    <p class="hero-subtitle">
+        {{ project }} — interface de gestion et de supervision en temps réel.
+    </p>
+
+    <a href="/about" class="btn">En savoir plus</a>
+</main>
+
+<footer>
+    &copy; {{ "now"|date("Y") }} RAIL – Tous droits réservés.
+</footer>
+
+</body>
+</html>
