@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page introuvable</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f1117;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 { font-size: 5rem; color: #63b3ed; }
+        p  { color: #a0aec0; margin: 1rem 0; }
+        a  { color: #63b3ed; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>404</h1>
+        <p>La page <code>{{ uri }}</code> est introuvable.</p>
+        <a href="/">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
